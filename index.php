@@ -24,7 +24,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 		<script src="assets/js/filtertable/jquery.filtertable.min.js" type="text/javascript"></script>
 	</head>
-	<body onload="prettyPrint()">
+	<body>
 		<div id="fio-header">
 			<div class="flex">
 				<div class="col fluid">

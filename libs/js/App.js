@@ -13,7 +13,6 @@ Application.prototype.init = function(){
 	app = this;
 	
 	$.get( 'index.php?get_data=1' , function(data){
-		//console.log(data);
 		me.app_data = data;
 		
 		me.onReady();
@@ -25,20 +24,16 @@ Application.prototype.get_data = function( apt_id ){
 	var f;
 	
 	var object_data = app.get_object_data_from_id( apt_id );
-	
 }
 
 /* Function to be called when app is ready, this will draw overlays and fade in frame */
 Application.prototype.onReady = function(){
-	
-	//console.log("onReady");
 	
 	app.populate();
 	
 }
 
 Application.prototype.populate = function(){
-	//console.log("populating...");
 
 	// Global table
 	$.each(app.app_data, function(index, cat){
