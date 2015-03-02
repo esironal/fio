@@ -25,13 +25,6 @@
 		<script src="assets/js/filtertable/jquery.filtertable.min.js" type="text/javascript"></script>
 	</head>
 	<body>
-		<div id="fio-header">
-			<div class="flex">
-				<div class="col fluid">
-					<h1>Fio</h1>
-				</div>
-			</div>
-		</div>
 		<div id="fio-scene">
 			<table id="contenttable"></table>
 		</div>
