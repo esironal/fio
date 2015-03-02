@@ -1,0 +1,19 @@
+.cat {
+	width: 200px;
+	float: left;
+	padding: 40px;
+	ul {
+		li {
+			list-style-type: decimal;
+			margin-left: 20px;
+			margin-bottom: 10px;
+			a {
+				color: #303030;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
