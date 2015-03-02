@@ -38,3 +38,6 @@ $cells['description'] = $entry->{'gsx$description'}->{'$t'};
 $cells['url'] = $entry->{'gsx$url'}->{'$t'};
 $cells['category'] = $entry->{'gsx$category'}->{'$t'};
 ```
+
+## Dependencies
+This app uses jQuery and jQuery.FilterTable (http://sunnywalker.github.io/jQuery.FilterTable/)

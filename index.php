@@ -39,7 +39,6 @@
 		<script src="libs/js/App.js"></script>
 		<script type="text/javascript">
 			window.onload = function() {
-					
 				var App = new Application();
 					
 				App.init();
