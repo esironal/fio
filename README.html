@@ -1,0 +1,51 @@
+<h1>fio</h1>
+
+<p>A simple bookmark page that connects with a Google Spreadsheet to get its data.</p>
+
+<h2>Example Config</h2>
+
+<p>The config file is located in /config and should named settings.inc.php.</p>
+
+<p>```
+&lt;?php
+    define(&lsquo;SHOW_ERRORS&rsquo;, true);</p>
+
+<pre><code>define('ROOT_PATH', '/Users/username/htdocs/fio');
+define('BASE_PATH', $_SERVER['DOCUMENT_ROOT'] );
+
+define('HOME_SLUG', 'home');
+define('APP_CACHE' , BASE_PATH . '/app_cache' );
+define('APP_CACHE_TIME', 3600);
+
+define('GOOGLE_KEY', 'INSERT_GOOGLE_KEY_HERE');
+define('GOOGLE_SPREADSHEET_ID', 'od6'); // First tab is always od6
+
+/* Load class files */
+include_once( BASE_PATH . '/libs/fio.class.php' );
+</code></pre>
+
+<p>?>
+```</p>
+
+<h2>App Cache</h2>
+
+<p>Create a writeable app_cache folder in the root folder in order to use cache. By default, it will update itself every hour. This can be changed by editing the APP_CACHE_TIME constant in settings.inc.php.</p>
+
+<h2>Spreadsheet and data</h2>
+
+<p>An example spreadsheet can be found here: https://docs.google.com/spreadsheet/pub?key=0AvhqNpXbu1ejdERlbGJNalJfOWtLQVg5bTJfNzJFaWc&amp;output=html</p>
+
+<p>You can add or replace new columns as you wish. Keep in mind that if you change them, you need to edit accordingly in libs/fio.class.php. Look for:</p>
+
+<p><code>
+$cells['id'] = $entry-&gt;{'gsx$id'}-&gt;{'$t'};
+$cells['name'] = $entry-&gt;{'gsx$name'}-&gt;{'$t'};
+$cells['description'] = $entry-&gt;{'gsx$description'}-&gt;{'$t'};
+$cells['url'] = $entry-&gt;{'gsx$url'}-&gt;{'$t'};
+$cells['category'] = $entry-&gt;{'gsx$category'}-&gt;{'$t'};
+$cells['favicon'] = 'http://www.google.com/s2/favicons?domain='.$cells['url'];
+</code></p>
+
+<h2>Dependencies</h2>
+
+<p>This app uses jQuery and jQuery.FilterTable (http://sunnywalker.github.io/jQuery.FilterTable/)</p>

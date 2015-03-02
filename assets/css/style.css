@@ -121,8 +121,11 @@ h2 {
     #contenttable tr td span.url, #contenttable tr th span.url {
       color: #16a085;
       font-size: 12px; }
+    #contenttable tr td span.favicon, #contenttable tr th span.favicon {
+      display: inline-block;
+      margin-right: 2px; }
   #contenttable tr:nth-child(odd) {
-    background: #fafafa; }
+    background: #f5f5f5; }
 
 .filter-table .quick {
   margin-left: 0.5em;

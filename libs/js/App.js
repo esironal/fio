@@ -42,7 +42,7 @@ Application.prototype.populate = function(){
 			$.each(cat, function(category, item){
 				var html = '<tr>';
 				html += '<td><a href="' + item.url + '">';
-				html += '<span class="title">' + item.name + '<span class="description">'+item.description+'</span></span>';
+				html += '<span class="title"><span class="favicon"><img src="' + item.favicon + '" /></span> ' + item.name + '<span class="description">'+item.description+'</span></span>';
 				html += '<span class="category">' + item.category + '</span>';
 				html += '<span class="url">' + item.url + '</span>';
 				html += '</a></td></tr>';
@@ -60,22 +60,4 @@ Application.prototype.populate = function(){
 	});
 
 	$('#fio-scene .filter-table input')[0].focus();
-
-	// List by category
-	/*$.each(app.app_data, function(index, cat){
-		
-		if(index != 'home' && index != '') {
-			var htmlList = '<div class="cat cat-"'+index+'><h2>'+index+'</h2><ul id="cat-'+index+'"></ul></div>';
-			$('#fio-scene').append(htmlList);
-			$.each(cat, function(category, item){
-				var html = '<li>';
-				html += '<a href="' + item.url + '">';
-				html += item.name;
-				html += '</a></li>';
-
-				$('#cat-'+item.category).append(html);
-			});
-		}
-		
-	});*/
 }

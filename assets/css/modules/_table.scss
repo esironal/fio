@@ -33,6 +33,10 @@
 				color: #16a085;
 				font-size: 12px;
 			}
+			span.favicon {
+				display: inline-block;
+				margin-right: 2px;
+			}
 		}
 		&:nth-child(odd) {
 			background: #f5f5f5;

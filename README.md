@@ -37,6 +37,7 @@ $cells['name'] = $entry->{'gsx$name'}->{'$t'};
 $cells['description'] = $entry->{'gsx$description'}->{'$t'};
 $cells['url'] = $entry->{'gsx$url'}->{'$t'};
 $cells['category'] = $entry->{'gsx$category'}->{'$t'};
+$cells['favicon'] = 'http://www.google.com/s2/favicons?domain='.$cells['url'];
 ```
 
 ## Dependencies
