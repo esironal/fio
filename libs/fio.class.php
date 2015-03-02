@@ -9,7 +9,7 @@
 					$cachefile = APP_CACHE . '/' . sha1( $url ) . '.appcache';
 					$use_cache = true;
 					
-					if( !file_exists($cachefile) || filemtime($cachefile) < (time()-3600) ){
+					if( !file_exists($cachefile) || filemtime($cachefile) < (time()-APP_CACHE_TIME) ){
 						$use_cache = false;
 					}
 				}
